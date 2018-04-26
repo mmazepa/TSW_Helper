@@ -1,7 +1,7 @@
 // out: style.css
 
 @generalWidth: 500px;
-@generalHeight: 250px;
+@generalHeight: 325px;
 
 @myColorPalette: darkred, darkgreen, darkblue;
 
@@ -46,6 +46,19 @@ body
   .size(@generalWidth, @generalHeight/2.5);
 }
 
+.clock
+{
+  background-color: purple;
+  color: cyan;
+  font-weight: bold;
+  font-size: smaller;
+  border: 2px outset whitesmoke;
+  border-radius: 5px;
+  width: 100px;
+  padding: 3px;
+  margin-left: auto;
+}
+
 .headerClick
 {
   .colors(@headerColorSecondary, @headerColorPrimary) !important;
@@ -54,7 +67,7 @@ body
 .main
 {
   .colors(@mainColorPrimary, @mainColorSecondary);
-  .size(@generalWidth, @generalHeight);
+  .size(@generalWidth, @generalHeight - 50px);
 }
 
 .mainClick
