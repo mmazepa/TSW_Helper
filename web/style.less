@@ -1,0 +1,99 @@
+// out: style.css
+
+@generalWidth: 500px;
+@generalHeight: 250px;
+
+@myColorPalette: darkred, darkgreen, darkblue;
+
+@headerColorPrimary: extract(@myColorPalette, 1);
+@headerColorSecondary: lighten(@headerColorPrimary, 50%);
+@mainColorPrimary: extract(@myColorPalette, 2);
+@mainColorSecondary: lighten(@mainColorPrimary, 50%);
+@footerColorPrimary: extract(@myColorPalette, 3);
+@footerColorSecondary: lighten(@footerColorPrimary, 50%);
+
+body
+{
+  background-color: silver;
+}
+
+.header, .main, .footer
+{
+  text-align: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.5s;
+  text-shadow: 2px 2px black;
+  p
+  {
+    text-align: justify;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+.headerClick, .mainClick, .footerClick
+{
+  width: @generalWidth + 100px !important;
+  text-shadow: 2px 2px white;
+  transition: 0.5s;
+}
+
+.header
+{
+  .colors(@headerColorPrimary, @headerColorSecondary);
+  .size(@generalWidth, @generalHeight/2.5);
+}
+
+.headerClick
+{
+  .colors(@headerColorSecondary, @headerColorPrimary) !important;
+}
+
+.main
+{
+  .colors(@mainColorPrimary, @mainColorSecondary);
+  .size(@generalWidth, @generalHeight);
+}
+
+.mainClick
+{
+  .colors(@mainColorSecondary, @mainColorPrimary) !important;
+}
+
+.footer
+{
+  .colors(@footerColorPrimary, @footerColorSecondary);
+  .size(@generalWidth, @generalHeight/2.5);
+}
+
+.footerClick
+{
+  .colors(@footerColorSecondary, @footerColorPrimary) !important;
+}
+
+.hidden
+{
+  width: @generalWidth - 100px !important;
+  opacity: 0.5;
+}
+
+.biggerFont
+{
+  font-size: 18px;
+}
+
+.colors(@background, @font)
+{
+  background-color: @background;
+  color: @font;
+  border: 3px outset @font;
+  border-radius: 10px;
+}
+
+.size(@width, @height)
+{
+  width: @width;
+  height: @height;
+}

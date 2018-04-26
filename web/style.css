@@ -1,0 +1,76 @@
+body {
+  background-color: silver;
+}
+.header,
+.main,
+.footer {
+  text-align: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.5s;
+  text-shadow: 2px 2px black;
+}
+.header p,
+.main p,
+.footer p {
+  text-align: justify;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.headerClick,
+.mainClick,
+.footerClick {
+  width: 600px !important;
+  text-shadow: 2px 2px white;
+  transition: 0.5s;
+}
+.header {
+  background-color: darkred;
+  color: #ff8b8b;
+  border: 3px outset #ff8b8b;
+  border-radius: 10px;
+  width: 500px;
+  height: 100px;
+}
+.headerClick {
+  background-color: #ff8b8b !important;
+  color: darkred !important;
+  border: 3px outset darkred !important;
+  border-radius: 10px !important;
+}
+.main {
+  background-color: darkgreen;
+  color: #64ff64;
+  border: 3px outset #64ff64;
+  border-radius: 10px;
+  width: 500px;
+  height: 250px;
+}
+.mainClick {
+  background-color: #64ff64 !important;
+  color: darkgreen !important;
+  border: 3px outset darkgreen !important;
+  border-radius: 10px !important;
+}
+.footer {
+  background-color: darkblue;
+  color: #8b8bff;
+  border: 3px outset #8b8bff;
+  border-radius: 10px;
+  width: 500px;
+  height: 100px;
+}
+.footerClick {
+  background-color: #8b8bff !important;
+  color: darkblue !important;
+  border: 3px outset darkblue !important;
+  border-radius: 10px !important;
+}
+.hidden {
+  width: 400px !important;
+  opacity: 0.5;
+}
+.biggerFont {
+  font-size: 18px;
+}
